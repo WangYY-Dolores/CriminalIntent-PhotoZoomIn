@@ -14,6 +14,7 @@ class PhotoZoomInFragment : DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val view = inflater.inflate(R.layout.zoom_layout, container, false)
         val imgView = view.findViewById(R.id.zoomImg) as ImageView
         val photoName = arguments?.getSerializable("PHOTO") as String
@@ -22,6 +23,7 @@ class PhotoZoomInFragment : DialogFragment() {
     }
 
     companion object {
+
         fun newInstance(photoName: String): PhotoZoomInFragment {
             val frag = PhotoZoomInFragment()
             val args = Bundle()
